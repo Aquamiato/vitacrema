@@ -3,373 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitacrema | Premium Specialty Coffee & Cozy Bakery</title>
+    <title>Vitacrema • Cozy Cafe in Riga</title>
     
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236F4E37'%3E%3Cpath d='M2 21h18v-2H2v2zM20 8h-2V5h2v3zm2-5H18c-1.1 0-2 .9-2 2v3c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM4 19h12c1.1 0 2-.9 2-2V5H2v12c0 1.1.9 2 2 2z'/%3E%3C/svg%3E">
+    <!-- Favicon -->
+    <link rel="icon" href="https://via.placeholder.com/64x64/3f2a1e/ffffff?text=☕" type="image/png">
+    <link rel="apple-touch-icon" href="https://via.placeholder.com/180x180/3f2a1e/ffffff?text=☕">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
-        :root {
-            --dark-espresso: #2b1b17;
-            --warm-coffee: #6F4E37;
-            --crema-gold: #c7a17a;
-            --soft-cream: #fbf8f5;
-            --pure-white: #ffffff;
-            --text-muted: #666666;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+        
         body {
-            background-color: var(--soft-cream);
-            color: var(--dark-espresso);
-            overflow-x: hidden;
-            line-height: 1.6;
+            font-family: 'Inter', system-ui, sans-serif;
         }
-
-        /* Navigation */
-        nav {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 30px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 10;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
-        }
-
-        .logo {
+        .heading-font {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--pure-white);
-            text-decoration: none;
-            letter-spacing: 1px;
         }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 35px;
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
         }
-
-        .nav-links a {
-            color: var(--pure-white);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
+        .menu-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
-        .nav-links a:hover {
-            color: var(--crema-gold);
-        }
-
-        /* Hero Section with Video */
-        .hero {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background-color: var(--dark-espresso);
-        }
-
-        .hero-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, rgba(27, 17, 15, 0.85) 40%, rgba(27, 17, 15, 0.4) 100%);
-            z-index: 2;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 3;
-            color: var(--pure-white);
-            max-width: 800px;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        .hero-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-        }
-
-        .hero-content p {
-            font-size: 1.25rem;
-            margin-bottom: 40px;
-            font-weight: 300;
-            letter-spacing: 0.5px;
-            color: #e0e0e0;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            background-color: var(--crema-gold);
-            color: var(--dark-espresso);
-            padding: 16px 45px;
-            font-weight: 600;
-            font-size: 1rem;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .cta-btn:hover {
-            background-color: var(--pure-white);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        /* Showcase Section */
-        .showcase-section {
-            max-width: 1200px;
-            margin: 100px auto;
-            padding: 0 40px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .showcase-image-wrapper {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            background-color: #ddd;
-        }
-
-        .showcase-img {
-            width: 100%;
-            height: 550px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .showcase-content h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            margin-bottom: 25px;
-            position: relative;
-        }
-
-        .showcase-content h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background-color: var(--crema-gold);
-            margin-top: 15px;
-        }
-
-        .showcase-content p {
-            color: var(--text-muted);
-            margin-bottom: 25px;
-            font-size: 1.05rem;
-        }
-
-        /* Features/Menu Grid */
-        .features-bg {
-            background-color: var(--pure-white);
-            padding: 100px 0;
-            border-top: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .section-title {
-            text-align: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin-bottom: 60px;
-        }
-
-        .features-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .feature-card {
-            background: var(--soft-cream);
-            padding: 40px 30px;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--warm-coffee);
-            margin-bottom: 20px;
-        }
-
-        .feature-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-        }
-
-        .feature-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark-espresso);
-            color: rgba(255, 255, 255, 0.7);
-            padding: 60px 40px;
-            text-align: center;
-            border-top: 4px solid var(--crema-gold);
-        }
-
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--pure-white);
-            margin-bottom: 20px;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            list-style: none;
-            margin-bottom: 30px;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.6);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: var(--crema-gold);
-        }
-
-        footer p {
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            .hero-content h1 { font-size: 3rem; }
-            .showcase-section { grid-template-columns: 1fr; gap: 40px; }
-            .showcase-img { height: 350px; }
-            .nav-links { display: none; }
+        .menu-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
         }
     </style>
 </head>
-<body>
-
-    <nav>
-        <a href="#" class="logo">vitacrema</a>
-        <ul class="nav-links">
-            <li><a href="#about">Our Story</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#location">Find Us</a></li>
-        </ul>
+<body class="bg-[#f8f5f0] text-[#3f2a1e]">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-mug-hot text-3xl text-amber-800"></i>
+                <span class="heading-font text-3xl font-bold tracking-tight">vitacrema</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#home" class="hover:text-amber-700 transition-colors">Home</a>
+                <a href="#menu" class="hover:text-amber-700 transition-colors">Menu</a>
+                <a href="#about" class="hover:text-amber-700 transition-colors">About</a>
+                <a href="#gallery" class="hover:text-amber-700 transition-colors">Gallery</a>
+                <a href="#contact" class="hover:text-amber-700 transition-colors">Contact</a>
+            </div>
+            
+            <a href="#" class="bg-amber-800 hover:bg-amber-900 text-white px-6 py-3 rounded-full text-sm font-medium flex items-center gap-2 transition-all">
+                <i class="fa-solid fa-location-dot"></i>
+                Visit Us
+            </a>
+        </div>
     </nav>
 
-    <header class="hero">
-        <video class="hero-video" autoplay loop muted playsinline>
-            <source src="kahve-video.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Crafting Moments, One Roast at a Time</h1>
-            <p>Experience the rich notes of locally roasted artisan beans brewed to ultimate precision.</p>
-            <a href="#about" class="cta-btn">Discover Vitacrema</a>
+    <!-- Hero Section -->
+    <header id="home" class="hero-bg h-screen flex items-center justify-center text-white pt-16">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-6 py-2 rounded-full mb-6">
+                <i class="fa-solid fa-star text-yellow-300"></i>
+                <span class="text-sm font-medium tracking-widest">Riga's Warmest Corner</span>
+            </div>
+            
+            <h1 class="heading-font text-7xl md:text-8xl font-bold mb-6 tracking-tighter">
+                VITACREMA
+            </h1>
+            <p class="text-2xl md:text-3xl mb-10 max-w-md mx-auto">
+                Specialty coffee • Homemade pastries • Unforgettable moments
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#menu" class="bg-white text-[#3f2a1e] hover:bg-amber-100 px-10 py-4 rounded-2xl font-semibold text-lg inline-flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-coffee"></i>
+                    Explore Menu
+                </a>
+                <a href="#contact" class="border-2 border-white hover:bg-white hover:text-[#3f2a1e] px-10 py-4 rounded-2xl font-semibold text-lg inline-flex items-center justify-center gap-3">
+                    Find Us
+                </a>
+            </div>
         </div>
     </header>
 
-    <section id="about" class="showcase-section">
-        <div class="showcase-image-wrapper">
-            <img class="showcase-img" src="vitacrema-cafe.jpg" alt="Vitacrema Warm Storefront Environment">
-        </div>
-        <div class="showcase-content">
-            <h2>Welcome to Your New Sanctuary</h2>
-            <p>At Vitacrema, we believe a coffee shop shouldn't just serve caffeine; it should serve community. Our carefully selected specialty beans are pulled with absolute mastery to highlight nuanced profiles of cocoa, fruit, and spice.</p>
-            <p>Step inside our warm, ambient corner to escape the rush of modern life. Pair your bespoke espresso with fresh pastries baked in-house daily by our passionate culinary team.</p>
-            <a href="#menu" class="cta-btn" style="padding: 12px 35px; font-size: 0.9rem;">View Today's Menu</a>
+    <!-- About -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-amber-800 font-medium tracking-widest">OUR STORY</span>
+                    <h2 class="heading-font text-5xl font-bold mt-3 mb-8 leading-tight">
+                        Coffee at its finest, served with heart
+                    </h2>
+                    <div class="space-y-6 text-lg text-gray-700">
+                        <p>
+                            Vitacrema is a cozy sanctuary in the heart of Riga. 
+                            With carefully selected coffee beans, homemade pastries, and a warm atmosphere, 
+                            we create the perfect place for meaningful moments.
+                        </p>
+                        <p>
+                            Open since 2024, we welcome you every day — whether you're starting your morning with a perfect cup, 
+                            meeting friends for lunch, or finding peace with a book in the afternoon.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="/home/workdir/attachments/IMG_3855.jpg" 
+                         alt="Vitacrema Cafe Exterior" 
+                         class="rounded-3xl shadow-2xl w-full object-cover">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-3xl shadow-xl max-w-[240px]">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-4xl">☕</div>
+                            <div>
+                                <div class="font-semibold text-lg">Best Spot in Riga</div>
+                                <div class="text-gray-600">Cesu iela 22</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="menu" class="features-bg">
-        <h2 class="section-title">The Vitacrema Standard</h2>
-        <div class="features-grid">
+    <!-- Menu -->
+    <section id="menu" class="py-24 bg-[#f8f5f0]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-amber-800 font-medium">MENU</span>
+                <h2 class="heading-font text-5xl font-bold mt-3">Signature Offerings</h2>
+            </div>
             
-            <div class="feature-card">
-                <div class="feature-icon">☕</div>
-                <h3>Artisan Roasts</h3>
-                <p>Ethically sourced single-origin beans roasted micro-batch style to maintain peak character profile.</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-xl">
+                    <div class="h-64 bg-[url('https://picsum.photos/id/292/800/600')] bg-cover"></div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-6">Coffee Classics</h3>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between border-b pb-3"><span>Espresso</span><span class="font-medium">€3.5</span></li>
+                            <li class="flex justify-between border-b pb-3"><span>Flat White</span><span class="font-medium">€4.8</span></li>
+                            <li class="flex justify-between border-b pb-3"><span>Latte</span><span class="font-medium">€5.0</span></li>
+                            <li class="flex justify-between"><span>Pour Over</span><span class="font-medium">€6.5</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-xl">
+                    <div class="h-64 bg-[url('https://picsum.photos/id/431/800/600')] bg-cover"></div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-6">Breakfast &amp; Sweets</h3>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between border-b pb-3"><span>Avocado Toast</span><span class="font-medium">€8.9</span></li>
+                            <li class="flex justify-between border-b pb-3"><span>Butter Croissant</span><span class="font-medium">€5.5</span></li>
+                            <li class="flex justify-between border-b pb-3"><span>Matcha Cheesecake</span><span class="font-medium">€7.2</span></li>
+                            <li class="flex justify-between"><span>Tiramisu</span><span class="font-medium">€6.8</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-xl">
+                    <div class="h-64 bg-[url('https://picsum.photos/id/870/800/600')] bg-cover"></div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-6">Refreshing Drinks</h3>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between border-b pb-3"><span>Iced Latte</span><span class="font-medium">€5.5</span></li>
+                            <li class="flex justify-between border-b pb-3"><span>Fresh Orange Juice</span><span class="font-medium">€4.8</span></li>
+                            <li class="flex justify-between border-b pb-3"><span>Matcha Lemonade</span><span class="font-medium">€6.2</span></li>
+                            <li class="flex justify-between"><span>Chai Latte</span><span class="font-medium">€5.9</span></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">🥐</div>
-                <h3>Fresh Bakes</h3>
-                <p>Crisp, flaky laminated croissants and artisan sweet treats prepared fresh every single morning.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">✨</div>
-                <h3>Cozy Workspace</h3>
-                <p>Designed with warm organic woods, natural light tones, and quiet zones ideal for focusing.</p>
-            </div>
-
         </div>
     </section>
 
-    <footer>
-        <div class="footer-logo">vitacrema</div>
-        <ul class="footer-links">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Contact Support</a></li>
-        </ul>
-        <p>&copy; 2026 vitacrema.com. Crafted for coffee lovers everywhere.</p>
+    <!-- Gallery -->
+    <section id="gallery" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-amber-800 font-medium">GALLERY</span>
+                <h2 class="heading-font text-5xl font-bold mt-3">Moments at Vitacrema</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="/home/workdir/attachments/IMG_3855.jpg" alt="Vitacrema Cafe" class="rounded-3xl aspect-square object-cover hover:scale-105 transition-transform">
+                <img src="https://picsum.photos/id/1015/600/600" alt="Interior" class="rounded-3xl aspect-square object-cover hover:scale-105 transition-transform">
+                <img src="https://picsum.photos/id/201/600/600" alt="Coffee" class="rounded-3xl aspect-square object-cover hover:scale-105 transition-transform">
+                <img src="https://picsum.photos/id/292/600/600" alt="Pastries" class="rounded-3xl aspect-square object-cover hover:scale-105 transition-transform">
+                <img src="https://picsum.photos/id/431/600/600" alt="Guests" class="rounded-3xl aspect-square object-cover hover:scale-105 transition-transform">
+                <img src="https://picsum.photos/id/870/600/600" alt="Atmosphere" class="rounded-3xl aspect-square object-cover hover:scale-105 transition-transform">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-[#3f2a1e] text-white pt-20 pb-12">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-12">
+            <div class="md:col-span-5">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fa-solid fa-mug-hot text-4xl"></i>
+                    <span class="heading-font text-4xl font-bold">vitacrema</span>
+                </div>
+                <p class="max-w-md text-amber-100 text-lg">
+                    A cozy cafe in the heart of Riga, serving exceptional coffee and creating beautiful memories.
+                </p>
+            </div>
+            
+            <div class="md:col-span-3">
+                <h4 class="font-semibold mb-6 text-amber-300">Quick Links</h4>
+                <ul class="space-y-3 text-amber-100">
+                    <li><a href="#" class="hover:text-white">Menu</a></li>
+                    <li><a href="#" class="hover:text-white">Events</a></li>
+                    <li><a href="#" class="hover:text-white">Private Events</a></li>
+                </ul>
+            </div>
+            
+            <div class="md:col-span-4">
+                <h4 class="font-semibold mb-6 text-amber-300">Visit Us</h4>
+                <div class="space-y-4 text-amber-100">
+                    <div>Cesu iela 22, Riga, Latvia</div>
+                    <div>+371 12 345 678</div>
+                    <div>hello@vitacrema.com</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center text-sm text-amber-100/60 mt-20">
+            © 2026 Vitacrema Cafe • All Rights Reserved
+        </div>
     </footer>
 
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href').length > 1) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
