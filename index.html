@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitacrema | Premium Specialty Coffee & Cozy Bakery</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236F4E37'%3E%3Cpath d='M2 21h18v-2H2v2zM20 8h-2V5h2v3zm2-5H18c-1.1 0-2 .9-2 2v3c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM4 19h12c1.1 0 2-.9 2-2V5H2v12c0 1.1.9 2 2 2z'/%3E%3C/svg%3E">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --dark-espresso: #2b1b17;
+            --warm-coffee: #6F4E37;
+            --crema-gold: #c7a17a;
+            --soft-cream: #fbf8f5;
+            --pure-white: #ffffff;
+            --text-muted: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--soft-cream);
+            color: var(--dark-espresso);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--pure-white);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            color: var(--pure-white);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--crema-gold);
+        }
+
+        /* Hero Section with Video */
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(27, 17, 15, 0.85) 40%, rgba(27, 17, 15, 0.4) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            color: var(--pure-white);
+            max-width: 800px;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            color: #e0e0e0;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--crema-gold);
+            color: var(--dark-espresso);
+            padding: 16px 45px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--pure-white);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Showcase Section (Using Image) */
+        .showcase-section {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .showcase-image-wrapper {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .showcase-img {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .showcase-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .showcase-content h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--crema-gold);
+            margin-top: 15px;
+        }
+
+        .showcase-content p {
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+        }
+
+        /* Features/Menu Grid */
+        .features-bg {
+            background-color: var(--pure-white);
+            padding: 100px 0;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 60px;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: var(--soft-cream);
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--warm-coffee);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-espresso);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 60px 40px;
+            text-align: center;
+            border-top: 4px solid var(--crema-gold);
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--pure-white);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--crema-gold);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 3rem; }
+            .showcase-section { grid-template-columns: 1fr; gap: 40px; }
+            .showcase-img { height: 350px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">vitacrema</a>
+        <ul class="nav-links">
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#location">Find Us</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <video class="hero-video" autoplay loop muted playsinline>
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-coffee-pouring-into-a-cup-from-a-coffee-maker-43187-large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Crafting Moments, One Roast at a Time</h1>
+            <p>Experience the rich notes of locally roasted artisan beans brewed to ultimate precision.</p>
+            <a href="#about" class="cta-btn">Discover Vitacrema</a>
+        </div>
+    </header>
+
+    <section id="about" class="showcase-section">
+        <div class="showcase-image-wrapper">
+            <img class="showcase-img" src="IMG_3855.jpg" alt="Vitacrema Warm Storefront Environment">
+        </div>
+        <div class="showcase-content">
+            <h2>Welcome to Your New Sanctuary</h2>
+            <p>At Vitacrema, we believe a coffee shop shouldn't just serve caffeine; it should serve community. Our carefully selected specialty beans are pulled with absolute mastery to highlight nuanced profiles of cocoa, fruit, and spice.</p>
+            <p>Step inside our warm, ambient corner to escape the rush of modern life. Pair your bespoke espresso with fresh pastries baked in-house daily by our passionate culinary team.</p>
+            <a href="#menu" class="cta-btn" style="padding: 12px 35px; font-size: 0.9rem;">View Today's Menu</a>
+        </div>
+    </section>
+
+    <section id="menu" class="features-bg">
+        <h2 class="section-title">The Vitacrema Standard</h2>
+        <div class="features-grid">
+            
+            <div class="feature-card">
+                <div class="feature-icon">☕</div>
+                <h3>Artisan Roasts</h3>
+                <p>Ethically sourced single-origin beans roasted micro-batch style to maintain peak character profile.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🥐</div>
+                <h3>Fresh Bakes</h3>
+                <p>Crisp, flaky laminated croissants and artisan sweet treats prepared fresh every single morning.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>Cozy Workspace</h3>
+                <p>Designed with warm organic woods, natural light tones, and quiet zones ideal for focusing.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">vitacrema</div>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Support</a></li>
+        </ul>
+        <p>&copy; 2026 vitacrema.com. Crafted for coffee lovers everywhere.</p>
+    </footer>
+
+</body>
+</html>
