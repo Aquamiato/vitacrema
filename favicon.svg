@@ -1,11 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="114" fill="#0b0f1a"/>
-  <text x="256" y="340" 
-    font-family="Georgia, serif" 
-    font-size="320" 
-    font-weight="700"
-    text-anchor="middle" 
-    fill="#5a8c46"
-    letter-spacing="-10">V</text>
-  <rect x="120" y="370" width="272" height="6" rx="3" fill="#5a8c46" opacity="0.4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Vita Crema favicon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c5754f"/>
+      <stop offset="100%" stop-color="#a85a3c"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <circle cx="366" cy="148" r="56" fill="#e1ab4d" opacity="0.92"/>
+  <path d="M128 274c0-44 35-80 78-80h102c43 0 78 36 78 80v18c0 62-50 112-112 112h-56c-62 0-112-50-112-112v-18z" fill="#f8eddc"/>
+  <path d="M346 232h30c32 0 58 26 58 58s-26 58-58 58h-20" fill="none" stroke="#f8eddc" stroke-width="24" stroke-linecap="round"/>
+  <rect x="112" y="404" width="288" height="20" rx="10" fill="#6f7a42" opacity="0.85"/>
 </svg>
