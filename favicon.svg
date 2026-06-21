@@ -1,11 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="114" fill="#0b0f1a"/>
-  <text x="256" y="340" 
-    font-family="Georgia, serif" 
-    font-size="320" 
-    font-weight="700"
-    text-anchor="middle" 
-    fill="#5a8c46"
-    letter-spacing="-10">V</text>
-  <rect x="120" y="370" width="272" height="6" rx="3" fill="#5a8c46" opacity="0.4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#2a1a12"/>
+  <ellipse cx="32" cy="46" rx="18" ry="4" fill="#0f0906" opacity="0.4"/>
+  <rect x="16" y="24" width="26" height="16" rx="5" fill="#f3ddc9"/>
+  <path d="M42 27h4c4 0 7 3 7 7s-3 7-7 7h-4" fill="none" stroke="#f3ddc9" stroke-width="3" stroke-linecap="round"/>
+  <path d="M23 20c-4-5-2-10 1-14" fill="none" stroke="#f8e6d7" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M31 19c-3-5-1-10 2-14" fill="none" stroke="#f8e6d7" stroke-width="2.8" stroke-linecap="round"/>
 </svg>

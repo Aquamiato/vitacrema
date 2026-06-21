@@ -1,67 +1,28 @@
-# ✨ Vita Crema — Luxury Swimwear That Makes You Glow
+# ☕ Vita Crema — Italian Cafe Landing Page
 
-> **Radiant. Confident. Sun-kissed.**
+A static, SEO-friendly landing page for **Vita Crema**, an Italian cafe concept.
 
-[![Live Site](https://img.shields.io/badge/Live%20Site-vitacrema.com-gold?style=flat-square)](https://vitacrema.com)
-[![Shop](https://img.shields.io/badge/Shop-Aquamiato.com-blue?style=flat-square)](https://aquamiato.com)
-[![Shipping](https://img.shields.io/badge/Shipping-Free%20Worldwide-green?style=flat-square)](https://aquamiato.com)
+## Stack
 
----
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- GitHub Pages static hosting
 
-## ☀️ About
+## Main files
 
-**Vita Crema** is a luxury swimwear landing page designed around confidence and radiance. It curates flattering bikinis, tummy-control swimsuits, golden swimwear and body-positive beach fashion — all available through [Aquamiato.com](https://aquamiato.com) with free worldwide shipping.
+- `index.html` — landing page
+- `hero-cafe.svg` — hero visual
+- `menu-cafe.svg` — secondary visual
+- `favicon.svg`, `favicon-16.png`, `favicon-32.png`, `favicon.ico`, `apple-touch-icon.png` — favicon assets
+- `robots.txt`, `sitemap.xml` — crawl/index helpers
+- `llms.txt` — AI-readable site summary
 
----
+## SEO included in `index.html`
 
-## 🛍️ Product Categories
-
-| Category | Styles |
-|---|---|
-| ✨ Glowing Swimwear | Metallic, gold-tone, radiant finishes |
-| 💪 Flattering Cuts | Tummy control, ruched, high-waist, slimming |
-| 👙 Bikinis | Triangle, halter, bandeau, one-shoulder |
-| 🩱 One-Pieces | Plunge, cutout, open-back, cheeky |
-| 🌴 Beachwear | Cover-ups, beach dresses, resort looks |
-
----
-
-## 🏗️ Tech Stack
-
-- **Frontend:** Pure HTML5 + CSS3
-- **Hosting:** GitHub Pages
-- **Custom Domain:** `vitacrema.com`
-- **Analytics:** Google Analytics 4
-- **SEO:** Schema.org JSON-LD, Open Graph, Twitter Card, FAQPage, llms.txt
-
----
-
-## 📂 File Structure
-
-```
-vitacrema/
-├── index.html        # Main landing page
-├── sitemap.xml       # Google sitemap
-├── robots.txt        # Crawler directives
-├── llms.txt          # AI search engine optimization
-└── CNAME             # Custom domain config
-```
-
----
-
-## 🔍 SEO & AEO Features
-
-- ✅ 39 body-positive & glow-focused keywords
-- ✅ Open Graph & Twitter Card tags
-- ✅ Schema.org: WebSite, Organization, Store, FAQPage, Product, BreadcrumbList
-- ✅ `llms.txt` for AI search engines
-- ✅ Google sitemap + robots.txt
-
----
-
-## 🔗 Links
-
-- 🌐 Landing page: [vitacrema.com](https://vitacrema.com)
-- 🛒 Main store: [aquamiato.com](https://aquamiato.com)
-- 📸 Instagram: [@aquamiato](https://www.instagram.com/aquamiato)
-- 📌 Pinterest: [pinterest.com/aquamiato](https://www.pinterest.com/aquamiato)
+- Meaningful title + meta description
+- Canonical URL
+- Open Graph + Twitter card metadata
+- Semantic heading structure
+- JSON-LD structured data (`WebSite`, `CafeOrCoffeeShop`)
+- Descriptive image alt text

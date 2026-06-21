@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Coffee cup and croissant illustration</title>
+  <desc id="desc">A stylized coffee cup, steam and croissant in warm Italian cafe colors.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#3d2418"/>
+      <stop offset="100%" stop-color="#1e140f"/>
+    </linearGradient>
+    <linearGradient id="cup" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f8e5d2"/>
+      <stop offset="100%" stop-color="#e9c6a4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" rx="40"/>
+  <circle cx="190" cy="150" r="90" fill="#d88935" opacity="0.16"/>
+  <circle cx="1020" cy="730" r="130" fill="#f5bb78" opacity="0.1"/>
+  <ellipse cx="540" cy="620" rx="320" ry="45" fill="#120d0a" opacity="0.55"/>
+  <g transform="translate(300 250)">
+    <rect x="120" y="180" width="440" height="220" rx="26" fill="url(#cup)"/>
+    <rect x="90" y="150" width="500" height="60" rx="30" fill="#f7d5b7"/>
+    <ellipse cx="340" cy="188" rx="215" ry="26" fill="#6d3f2a"/>
+    <path d="M560 230c52 0 94 36 94 82s-42 82-94 82h-30v-42h30c27 0 48-18 48-40s-21-40-48-40h-30v-42h30z" fill="#f2d8c0"/>
+    <path d="M210 100c-30-32-15-66 4-96" stroke="#f7d5b7" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.85"/>
+    <path d="M312 92c-24-34-8-72 10-102" stroke="#f7d5b7" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.85"/>
+    <path d="M420 104c-22-29-10-62 8-90" stroke="#f7d5b7" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.85"/>
+  </g>
+  <g transform="translate(140 560)">
+    <path d="M0 80c45-100 150-126 240-80 40 22 70 60 82 102H0z" fill="#d88935"/>
+    <path d="M32 80c34-64 103-79 164-53 29 13 52 32 68 53H32z" fill="#f4b973"/>
+    <path d="M84 84c20-25 44-39 76-42" stroke="#c06c2c" stroke-width="11" stroke-linecap="round"/>
+    <path d="M166 98c22-34 52-52 92-58" stroke="#c06c2c" stroke-width="11" stroke-linecap="round"/>
+  </g>
+</svg>
